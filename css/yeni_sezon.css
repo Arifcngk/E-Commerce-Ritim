@@ -1,0 +1,65 @@
+:root {
+  --font-fam: "Expose", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+}
+.container h1 {
+  width: 100%;
+  margin-left: 10%;
+  font-size: 6vmax;
+  letter-spacing: 4px;
+  color: #fff;
+  font-family: var(--font-fam);
+  /*   text-transform: uppercase; */
+  text-wrap: nowrap;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+#video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #dadada20;
+  z-index: -1;
+  overflow: hidden;
+}
+#video-container .video {
+  pointer-events: none;
+  min-width: 100vw;
+  position: absolute;
+  opacity: 0;
+  transition: 1000ms ease;
+}
+#video-container::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000bb;
+}
+#one:hover ~ #video-container .one,
+#two:hover ~ #video-container .two,
+#three:hover ~ #video-container .three,
+#four:hover ~ #video-container .four {
+  opacity: 1;
+}
+
+.container:hover h1:not(hover) {
+  opacity: 0.3;
+}
+.container:hover h1:hover {
+  opacity: 1;
+}

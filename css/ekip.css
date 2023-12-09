@@ -1,0 +1,92 @@
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 4rem auto;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.card {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 14rem;
+  height: 23rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.card .card-img {
+  perspective: 1200px;
+}
+
+.card .card-img .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s; /* Dönüş süresini 0.5 saniyeye düşürdüm */
+  transform-style: preserve-3d;
+}
+
+.card .card-img:hover .flip-card-inner {
+  /* :hover'ı buraya taşıdım */
+  transform: rotateY(180deg);
+}
+
+.card .card-img .flip-card-front,
+.card .card-img .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card .card-img .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.card .card-img .flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card .card-img img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card .card-body {
+  padding: 2rem;
+  margin-top: 17rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.card .card-body h3 {
+  margin: 0;
+}
+
+.card .card-body small {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.support-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 1rem;
+}
