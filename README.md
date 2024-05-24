@@ -1,4 +1,5 @@
-# RitimProjem
-Bu proje, erkek giyimine odaklanan bir butik sitesinin web tabanlı bir prototipini sunar. Bu projeyi, Bilişim Sistemleri Müh. tarafından verilen web geliştirme dersi kapsamında geliştirdim.
+# E-Commerce-Ritim
+This project is a stylish and modern men's boutique clothing website built using HTML, CSS, JavaScript, and Bootstrap. The website showcases a variety of men's fashion items, including formal wear, casual wear, accessories, and more.
 
-https://ritimmoda.netlify.app/
+
+website url=  https://ritimmoda.netlify.app/
